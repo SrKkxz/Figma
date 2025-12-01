@@ -2,20 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', 'Helvetica', sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     background: #0D0D12;
     color: #ffffff;
     line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 .container {
@@ -31,7 +24,6 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
 .header-content {
@@ -57,14 +49,12 @@ body {
     font-weight: bold;
     color: #FF005E;
     font-size: 14px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo-text {
     font-weight: bold;
     font-size: 22px;
     color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .nav {
@@ -78,32 +68,12 @@ body {
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 8px;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.nav a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    transition: left 0.3s ease;
-}
-
-.nav a:hover::before,
-.nav a.active::before {
-    left: 0;
+    transition: 0.3s;
 }
 
 .nav a:hover,
 .nav a.active {
     background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .banner {
@@ -111,7 +81,6 @@ body {
     margin: 30px 0;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
 }
 
 .banner img {
@@ -128,8 +97,6 @@ body {
     background: rgba(13, 13, 18, 0.8);
     padding: 25px;
     border-radius: 12px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     max-width: 400px;
 }
 
@@ -137,17 +104,13 @@ body {
     font-size: 42px;
     font-weight: bold;
     margin-bottom: 12px;
-    background: linear-gradient(45deg, #FF005E, #6320EE);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
 }
 
 .banner-text p {
     font-size: 22px;
-    color: #ffffff;
+    color: #FF005E;
     font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .titulo-produtos {
@@ -168,7 +131,6 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 2px;
 }
 
 .produtos-grid {
@@ -182,32 +144,13 @@ body {
     background: #1A1A1D;
     border-radius: 15px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: 0.3s;
     border: 2px solid transparent;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    position: relative;
-}
-
-.produto-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #FF005E, #6320EE);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.produto-card:hover::before {
-    transform: scaleX(1);
 }
 
 .produto-card:hover {
-    transform: translateY(-12px);
+    transform: translateY(-5px);
     border-color: #FF005E;
-    box-shadow: 0 12px 35px rgba(255, 0, 94, 0.3);
 }
 
 .produto-card img {
@@ -215,11 +158,6 @@ body {
     height: 280px;
     object-fit: cover;
     display: block;
-    transition: transform 0.3s ease;
-}
-
-.produto-card:hover img {
-    transform: scale(1.05);
 }
 
 .produto-info {
@@ -240,6 +178,24 @@ body {
     margin-top: 8px;
 }
 
+.produto-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.produto-card-link:hover .produto-card {
+    border-color: #6320EE;
+}
+
+.click-indicator {
+    display: block;
+    font-size: 12px;
+    color: #6320EE;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
 .detalhes-container {
     margin: 40px 0;
     display: grid;
@@ -248,15 +204,9 @@ body {
     align-items: start;
 }
 
-.detalhes-imagem {
-    position: sticky;
-    top: 100px;
-}
-
 .detalhes-imagem img {
     width: 100%;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .detalhes-info {
@@ -264,7 +214,6 @@ body {
     padding: 30px;
     border-radius: 15px;
     border: 2px solid #FF005E;
-    box-shadow: 0 8px 30px rgba(255, 0, 94, 0.2);
 }
 
 .detalhes-info h1 {
@@ -347,16 +296,13 @@ body {
     padding: 12px 20px;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
     font-weight: bold;
     min-width: 60px;
 }
 
-.tamanho-btn:hover,
-.tamanho-btn.active {
+.tamanho-btn:hover {
     background: #FF005E;
     border-color: #FF005E;
-    transform: translateY(-2px);
 }
 
 .cores {
@@ -378,30 +324,10 @@ body {
     height: 40px;
     border-radius: 50%;
     border: 3px solid transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.cor-option::after {
-    content: '✓';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.3s ease;
 }
 
 .cor-option.active {
     border-color: #FF005E;
-    transform: scale(1.1);
-}
-
-.cor-option.active::after {
-    opacity: 1;
 }
 
 .acoes-produto {
@@ -436,18 +362,16 @@ body {
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
-    transition: all 0.3s ease;
     margin-bottom: 10px;
 }
 
 .btn-comprar {
-    background: linear-gradient(45deg, #FF005E, #6320EE);
+    background: #FF005E;
     color: white;
 }
 
 .btn-comprar:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 0, 94, 0.4);
+    background: #A01A7D;
 }
 
 .btn-carrinho {
@@ -459,7 +383,6 @@ body {
 .btn-carrinho:hover {
     background: #FF005E;
     color: white;
-    transform: translateY(-3px);
 }
 
 .info-adicional {
@@ -491,7 +414,6 @@ body {
     background: #1A1A1D;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .sobre-container h1 {
@@ -507,11 +429,10 @@ body {
     position: absolute;
     width: 100px;
     height: 4px;
-    background: linear-gradient(90deg, #FF005E, #6320EE);
+    background: #FF005E;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 2px;
 }
 
 .sobre-content {
@@ -528,9 +449,7 @@ body {
 }
 
 .sobre-texto .destaque {
-    background: linear-gradient(45deg, #FF005E, #6320EE);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #FF005E;
     font-weight: bold;
     font-size: 18px;
     padding: 15px;
@@ -547,7 +466,7 @@ body {
 .imagem-placeholder {
     width: 100%;
     height: 300px;
-    background: linear-gradient(45deg, #2A2A2D, #1A1A1D);
+    background: #2A2A2D;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -574,12 +493,7 @@ body {
     padding: 25px;
     border-radius: 10px;
     text-align: center;
-    transition: transform 0.3s ease;
     border-top: 4px solid #FF005E;
-}
-
-.valor-item:hover {
-    transform: translateY(-5px);
 }
 
 .valor-item h3 {
@@ -604,7 +518,6 @@ body {
     background: #1A1A1D;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .contato-info h2 {
@@ -647,7 +560,6 @@ body {
     background: #1A1A1D;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     border: 2px solid #FF005E;
 }
 
@@ -683,7 +595,6 @@ body {
     border-radius: 8px;
     color: #ffffff;
     font-size: 16px;
-    transition: border-color 0.3s ease;
 }
 
 .form-group input:focus,
@@ -698,7 +609,7 @@ body {
 }
 
 .btn-enviar {
-    background: linear-gradient(45deg, #FF005E, #6320EE);
+    background: #FF005E;
     color: white;
     border: none;
     padding: 15px;
@@ -706,23 +617,19 @@ body {
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
-    transition: all 0.3s ease;
     margin-top: 10px;
 }
 
 .btn-enviar:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 0, 94, 0.4);
+    background: #A01A7D;
 }
 
 .footer {
     background: linear-gradient(90deg, #FF005E, #A01A7D, #6320EE);
     padding: 25px 0;
     text-align: center;
-    margin-top: auto;
     font-weight: bold;
     font-size: 16px;
-    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 1024px) {
@@ -734,10 +641,6 @@ body {
     
     .sobre-content {
         grid-template-columns: 1fr;
-    }
-    
-    .detalhes-imagem {
-        position: static;
     }
 }
 
